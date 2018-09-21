@@ -46,7 +46,7 @@ const getPrivateFunction = (content) => {
     if (reg) {
         let block = searchBlock(content, reg.index);
         let mainContent = content.slice(reg.index, block.end);
-        let name = regexp.functionName.exec(mainContent)[1];
+        let name = reg[0].replace(/\W*/g, '').slice(2).trim();
         let resContent = mainContent.replace(/(__([^\(]*))/gm, `$2 = function `).trim();
 
         return {
