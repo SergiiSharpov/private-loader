@@ -10,7 +10,7 @@ module.exports = {
         if (functionsMap && functionsMap.length) {
             funcContent = functionsMap.reduce((prev, current) => {
                 let funcDet = `privateMap.get(this).${current.content};\n`;
-                let funcBind = `privateMap.get(this).${current.name}.bind(this);\n`;
+                let funcBind = `privateMap.get(this).${current.name} = privateMap.get(this).${current.name}.bind(this);\n`;
                 return prev + funcDet + funcBind;
             }, '');
         }

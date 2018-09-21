@@ -1,7 +1,8 @@
 const Search = require('./utils/search');
 const Template = require('./utils/templateES6');
 
-const privateLoader = (source) => {
+function privateLoader(source, map) {
+    this.cacheable && this.cacheable();
 
     let classMap = Search.getClassMap(source);
 
@@ -9,9 +10,9 @@ const privateLoader = (source) => {
         let result = '';
 
         if (current.isClass) {
-            let funcMap = Search.getFunctionsMap(current.data.content);
-            result = Template.replaceVariables(funcMap.content);
-            result = Template.updateConstructor(result, funcMap.map);
+            result = Template.replaceVariables(current.data.content);
+            let funcMap = Search.getFunctionsMap(result);
+            result = Template.updateConstructor(funcMap.content, funcMap.map);
             result = Template.incapsulate(current.data.name, result);
         } else {
             result = current.data;
@@ -19,6 +20,6 @@ const privateLoader = (source) => {
 
         return prev + result;
     }, '');
-};
+}
 
 module.exports = privateLoader;
