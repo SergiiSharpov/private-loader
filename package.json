@@ -1,6 +1,6 @@
 {
   "name": "private-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is a webpack loader that handle private variables in js",
   "main": "index.js",
   "scripts": {
