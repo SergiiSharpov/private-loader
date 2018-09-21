@@ -1,0 +1,27 @@
+{
+  "name": "private-loader",
+  "version": "0.0.1",
+  "description": "This is a webpack loader that handle private variables in js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "private",
+    "webpack",
+    "loader",
+    "js",
+    "oop",
+    "es6"
+  ],
+  "author": {
+    "name": "Sergey Sharpov",
+    "email": "gorlovkaann@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SergiiSharpov/private-loader.git"
+  },
+  "license": "MIT"
+}
