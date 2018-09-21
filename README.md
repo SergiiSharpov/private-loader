@@ -4,7 +4,7 @@
 
 <h1 align="center">Private Loader</h1>
 
-This is a webpack loader that handle private variables in js
+This is a webpack loader that handles private variables in js
 
 
 <h2 align="center">Install</h2>
