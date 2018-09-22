@@ -1,5 +1,6 @@
 [![npm][npm]][npm-url]
 [![license][license]][license-url]
+[![downloads][downloads]][npm-url]
 
 
 <h1 align="center">Private Loader</h1>
@@ -75,3 +76,5 @@ console.log(object.qwerty);// 5
 
 [license]: https://img.shields.io/npm/l/private-loader.svg
 [license-url]: https://github.com/SergiiSharpov/private-loader/blob/master/LICENSE
+
+[downloads]: https://img.shields.io/npm/dt/private-loader.svg
